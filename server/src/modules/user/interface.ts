@@ -1,10 +1,15 @@
+export enum RoleEnum {
+  User = 'USER',
+  Admin = 'ADMIN',
+  Mod = 'MOD',
+}
+
 export interface IUser {
   id: string;
   username: string;
-  password: string;
   email: string;
   phone?: string;
-  role: string[];
+  role: RoleEnum.Admin | RoleEnum.User | RoleEnum.Mod;
   isActive: boolean;
   name?: string;
   point?: number;
